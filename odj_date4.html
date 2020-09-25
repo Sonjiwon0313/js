@@ -1,0 +1,22 @@
+<div id='clock'></div>
+
+<script>
+	function setClock() {
+		var now = new Date();
+		var h=now.getHours();
+
+	if(h>12){
+		var s = '오후 ' + (h-12) + ':' + now.getMinutes() + ':' + now.getSeconds();
+	}
+	else if(h==12)
+	{
+		var s = '오후 ' + h + ':' + now.getMinutes() + ':' + now.getSeconds();
+	}
+	else{
+		var s = '오전 ' + h + ':' + now.getMinutes() + ':' + now.getSeconds();
+	}
+		document.getElementById('clock').innerHTML = s;
+		setTimeout('setClock()',1000);
+	}
+	setClock();
+</script>

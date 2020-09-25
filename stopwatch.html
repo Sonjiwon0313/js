@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		var  m=0;
+		var s=0;
+		var ms=0;
+		var r='0'+m+":"+'0'+s+":"+ms; 
+
+		
+		function st(){
+			
+			ms++;
+
+			if(ms<9){
+				ms='0'+ms;
+			}
+
+			if(m<1){
+				m='00'
+			}
+
+			if(s<1){
+				s='00'
+			}
+
+			if(ms==100)
+			{
+				s++;
+
+				if(s<=9)
+				{
+					s='0'+s;
+				}
+				ms=0;
+			}
+
+			if(s==60)
+			{
+				m++;
+
+				if(m<=9)
+				{
+					m='0'+m;
+				}
+				s=0;
+			}
+
+			r=m+":"+s+":"+ms;
+
+			document.getElementById('clock').innerHTML = r;
+			t=setTimeout('st()', 100);
+		}
+		
+
+		function pt(){
+			clearTimeout(t);
+		}
+
+
+	</script>
+</head>
+<body>
+<div id='clock' style="width:200px;height:30px;border-style: solid;">00:00:00</div>
+<button onclick="st()">start</button>
+<button onclick="pt()">pause</button>
+<button onclick="javascript:location.reload()">reset</button>
+</body>
+</html>
+

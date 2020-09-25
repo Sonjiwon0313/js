@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<script>
+		var x = document.getElementById("x").value;
+		var y = document.getElementById("y").value;
+		var sum;
+
+		alert(x)
+
+		function calc() {
+			
+			if(x==" " || y==" ")
+			{
+				alert("값을 입력해주세요");
+			}
+			else
+			{
+				sum = parseInt(x) + parseInt(y);
+				document.getElementById("sum").value = sum;
+			}
+			
+			
+		}
+		function calc1() {
+			
+			
+			sum = parseInt(x) - parseInt(y);
+			document.getElementById("sum").value = sum;
+			
+		}
+		function calc2() {
+			
+			sum = parseInt(x) / parseInt(y);
+			document.getElementById("sum").value = sum;
+			
+		}
+		function calc3() {
+			
+			sum = parseInt(x) * parseInt(y);
+			document.getElementById("sum").value = sum;
+			
+		}
+		function calc4() {
+			document.getElementById("x").value="";
+			document.getElementById("y").value="";
+			document.getElementById("sum").value = "";
+			
+			
+		}
+	</script>
+</head>
+<body>
+	<h3>덧셈계산기</h3>
+	<form name="myForm">
+		첫번째 정수: <input id="x"/><br />
+		두번째 정수: <input id="y" / ><br />
+		결과: <input id="sum" readonly/><br />
+		<input type="button" value="덧셈" onclick="calc();" />
+		<input type="button" value="뺄셈" onclick="calc1();" />
+		<input type="button" value="나눗셈" onclick="calc2();" />
+		<input type="button" value="곱셈" onclick="calc3();" />
+		<input type="button" value="지우기" onclick="calc4();"/>
+	</form>
+
+</body>
+</html>
