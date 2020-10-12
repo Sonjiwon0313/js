@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+	<title>자바스크립트 다크모드</title>
+	<style type="text/css">
+	.dark{background-color: #212121; color:white;}
+	.dark #selected { color: yellow; }
+	.white {background-color: white;color:black;}
+	.white #selected {color : green;}
+	#selected {color: green;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>닥쳐</li>
+		<li>다 닥쳐</li>
+		<li id="selected">javascript</li>
+	</ul>
+	<input type="button" onclick="document.body.className='dark'" value="dark" />
+	<input type="button" onclick="document.body.className='white'" value="white" />
+	
+</body>
+</html>
